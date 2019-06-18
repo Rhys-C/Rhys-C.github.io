@@ -4,31 +4,39 @@ Youtube API key = AIzaSyDHGdeMpgFNIa_TTFXoivD-mgF6rpGigjU
 
 <!DOCTYPE html>
 <html>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 	<head>
 		<style>
 			body {
 				background-color: rgb(50, 50, 50);
 			}
-			h1.sansserif {
+			h1 {
+				color:rgb(134, 134, 134);
 				font-family: Arial, Helvetica, sans-serif;
+				font-size:300%;
+				text-align:center;
 			}
-
 			.button {
 				background-color: rgba(0,0,0,0);
 				border: none;
 				color: rgb(134, 134, 134);
 				text-align: center;
 				text-decoration: none;
-				display: inline-block;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
 				font-size: 20px;
 				transition-duration: 0.4s;
 				cursor: pointer;
 			}
-
 			.button:hover {
 				color: white;
+			}
+			iframe {
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				width:80%;
+				height:360px;
 			}
 
 
@@ -37,12 +45,17 @@ Youtube API key = AIzaSyDHGdeMpgFNIa_TTFXoivD-mgF6rpGigjU
 
 	<body>
 
-		<h1 style="color:rgb(134, 134, 134); font-size:4vw;" class="sansserif">Favourites At Random</h1>
-
-		<iframe id="ytplayer" type="text/html" width="640" height="360" src="" frameborder="0"></iframe>
+		<div>
+			<h1>RANDOM HEAT</h1>
+		</div>
+		
 
 		<div>
-			<button type="button" class="button" onclick="window.location.reload();"> NEXT	</button>
+			<iframe id="ytplayer" type="text/html" src="" frameborder="0"></iframe>
+		</div>
+		
+		<div style="padding:10px;">
+			<button class="button" onclick="window.location.reload();">NEXT</button>
 		</div>
 		
 		<script>
