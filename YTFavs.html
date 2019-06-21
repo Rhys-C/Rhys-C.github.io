@@ -1,5 +1,12 @@
 <!--
 Youtube API key = AIzaSyDHGdeMpgFNIa_TTFXoivD-mgF6rpGigjU
+
+ToDo:	Request video from playlist and index, but then play the link for the specific video only, removing the list part
+		this is becuase some videos wont play in a list (?)
+		^^^ these videos wont play "embedded"! How to work around that?
+ToDo:	Get videos to play automatically and rollover to the next
+ToDo:	Prevent phones from sleeping when using the site (possible?)
+ToDo:	Add text for current video details
 -->
 
 <!DOCTYPE html>
@@ -20,11 +27,11 @@ Youtube API key = AIzaSyDHGdeMpgFNIa_TTFXoivD-mgF6rpGigjU
 				border: none;
 				color: rgb(134, 134, 134);
 				text-align: center;
-				text-decoration: none;
 				display: block;
 				margin-left: auto;
 				margin-right: auto;
 				font-size: 20px;
+				font-weight: bold;
 				transition-duration: 0.4s;
 				cursor: pointer;
 			}
@@ -46,9 +53,8 @@ Youtube API key = AIzaSyDHGdeMpgFNIa_TTFXoivD-mgF6rpGigjU
 	<body>
 
 		<div>
-			<h1>RANDOM HEAT</h1>
+			<h1>RANDOM HEATERS</h1>
 		</div>
-		
 
 		<div>
 			<iframe id="ytplayer" type="text/html" src="" frameborder="0"></iframe>
