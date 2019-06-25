@@ -7,6 +7,8 @@ ToDo:	Request video from playlist and index, but then play the link for the spec
 ToDo:	Get videos to play automatically and rollover to the next
 ToDo:	Prevent phones from sleeping when using the site (possible?)
 ToDo:	Add text for current video details
+
+NON EMBEDDABLE VIDEO LINK https://www.youtube.com/watch?list=FLUlQZqF-2Zcct2_dCQsyMIg&v=0Pxye0DGQQ0
 -->
 
 <!DOCTYPE html>
@@ -73,7 +75,7 @@ ToDo:	Add text for current video details
 			request.send();
 			request.onload = function() {
 				var nPlaylistCount = request.response.items[0].contentDetails.itemCount;
-				var strAddr = "https://www.youtube.com/embed?listType=playlist&list=FLUlQZqF-2Zcct2_dCQsyMIg&index=";
+				var strAddr = "https://www.youtube.com/embed?origin=https://www.youtube.com&listType=playlist&list=FLUlQZqF-2Zcct2_dCQsyMIg&index=";
 				var nRand = Math.floor(Math.random() * (nPlaylistCount + 1));
 				document.getElementById("ytplayer").src = strAddr + nRand;
 			}
